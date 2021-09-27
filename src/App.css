@@ -1,0 +1,144 @@
+:root{
+  --gradient: linear-gradient(
+    45deg,
+    rgb(18, 18, 18),
+    rgb(22, 22, 22),
+    rgb(35, 35, 35),
+    rgb(55, 55, 100),
+    rgb(87, 124, 176),
+    rgb(139, 189, 205)
+  );
+}
+
+.App{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-size: 600%;
+  background-image: var(--gradient);
+  animation: bg-animation 30s infinite alternate;
+  font-family: "Lucida Console", monospace;
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: left
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+ul {
+  list-style-type: none
+}
+
+h1{
+  color: white;
+  font-size: 3em;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 3em;
+  margin: 3em;
+  justify-content: center;
+}
+
+.header{
+  display: grid;
+  padding: 1em;
+  place-items: center;
+  grid-column: 1 / 4;
+}
+
+.input{
+  /*background-color:rgb(141, 141, 255);*/
+  /*padding: 1em;*/
+}
+
+
+.listcontainer{
+  display: grid;
+  padding: 1em;
+  grid-column: 1 / 4;
+  place-items: center;
+}
+
+.todolist{
+  grid-gap: 1em;
+}
+
+.content{
+  display: flex;
+  width: 100%;
+  margin-right: 4em;
+}
+
+.notdone{
+  display: flex;
+  color: rgb(131, 131, 254);
+  background-color: rgb(73, 86, 93);
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1em;
+  gap: 1em;
+  align-items: center;
+}
+
+.notdone:hover{
+  background: rgba(61, 232, 251, 0.5);
+  box-shadow: 0 5px 25px rgba(0,0,0,.2);
+}
+
+.done{
+  display: flex;
+  color: rgba(199, 199, 249, 0.5);
+  background-color: rgba(157, 169, 176, 0.1);
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1em;
+  gap: 1em;
+  align-items: center;
+}
+
+.done:hover{
+  background: rgba(61, 232, 251, 0.5);
+  box-shadow: 0 5px 25px rgba(0,0,0,.2);
+}
+
+.entertask{
+  width: 25vw;
+  height: 10%;
+}
+
+.addbutton{
+  padding: 10px;
+  background-color: rgb(95, 144, 94);
+  border: none;
+  color: white;
+}
+
+.input{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 2em;
+}
+
+.entertask{
+  height: 2em;
+}
+
+.deletebutton{
+  background-color: rgb(193, 71, 71);
+  border: none;
+  padding: 0.5em;
+  color: white;
+}
+
+
